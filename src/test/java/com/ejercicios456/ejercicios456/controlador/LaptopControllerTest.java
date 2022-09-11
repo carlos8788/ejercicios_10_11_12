@@ -7,8 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.boot.test.web.server.LocalServerPort;
+
 import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
 
 import java.util.Arrays;
@@ -32,6 +33,7 @@ class LaptopControllerTest {
         restTemplateBuilder = restTemplateBuilder.rootUri("http://localhost:" + port);
         testRestTemplate = new TestRestTemplate(restTemplateBuilder);
     }
+
     /*
     @Test
     void findAll() {
@@ -41,7 +43,7 @@ class LaptopControllerTest {
 
         List<Laptop> books = Arrays.asList(response.getBody());
         System.out.println(books.size());
-    }
+    }*/
 
     @Test
     void findOneById() {
@@ -50,7 +52,7 @@ class LaptopControllerTest {
         assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
 
     }
-    */
+
 
     @DisplayName("Estoy testeando como crear una laptop")
     @Test
